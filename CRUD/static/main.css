@@ -1,0 +1,365 @@
+/* color used:
+    #92806f prominent
+    #53483a less-prominent
+    #6e6d6a dark grey
+    #c6c3bb light grey
+*/
+
+/* navbar customization */
+
+/* Navigation bar background */
+.navbar {
+    background-color: #92806f !important;
+    /* Prominent color for the navbar background */
+}
+
+/* Navigation bar links */
+.navbar-light .navbar-nav .nav-link {
+    color: #C6C3BB;
+    /* Light grey for nav links */
+}
+
+/* Navbar brand color */
+.navbar-light .navbar-brand {
+    color: #53483a;
+    /* Dark grey for brand text */
+}
+
+/* Navbar toggler icon */
+.navbar-light .navbar-toggler {
+    border-color: #C6C3BB;
+    /* Light grey for toggler border */
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#6e6d6a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    /* Dark grey toggler icon */
+}
+
+/* Search form input and button */
+#search-form .form-control {
+    background-color: #c6c3bb;
+    /* Less-prominent color for input background */
+    color: #92806F !important;
+    /* Dark grey for input text */
+}
+
+#search-form .form-control::placeholder {
+    color: #92806F;
+    /* Dark grey for placeholder text */
+    opacity: 1;
+    /* Ensure the color is fully opaque */
+}
+
+#search-form .btn-outline-success {
+    color: #c6c3bb;
+    background-color: #53483a;
+    border-color: #c6c3bb;
+}
+
+#search-form .btn-outline-success:hover {
+    background-color: #c6c3bb;
+    /* Dark grey for button background on hover */
+    color: #53483a;
+    /* Light grey for button text on hover */
+}
+
+#search-form .form-control:focus {
+    border-color: #92806F;
+    /* Change to your prominent color */
+    box-shadow: 0 0 0 0.2rem rgba(146, 128, 111, 0.25);
+    /* Optional: Adds a glow effect with your color */
+}
+
+/* end */
+
+
+/* homepage css */
+
+#font {
+    font-family: 'Libre Baskerville', serif;
+    color: #92806F;
+    /* Dark Grey for primary text */
+    background-color: #c6c3bb;
+    /* Light Grey for background */
+}
+
+.large {
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.homelist {
+    margin: 10px 0px;
+    font-size: 18px;
+}
+
+.clickable {
+    color: #92806f !important;
+    font-weight: bold !important;
+}
+
+.bg-image {
+    background-image: url('https://www.tastingtable.com/img/gallery/20-best-coffee-shops-in-nyc-ranked/l-intro-1686181905.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    padding: 150px 0;
+    text-align: center;
+    margin: 0px -15px;
+}
+
+.text-overlay {
+    font-weight: bold;
+    display: inline-block;
+    color: #92806F;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    /* Dark shadow for better contrast */
+}
+
+.rounded-circle {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.rounded-circle:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    /* Shadow effect on hover */
+    transform: translateY(-3px);
+}
+
+.text-storename {
+    color: #6e6d6a !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.homelist h2 {
+    font-size: 1.25rem;
+    /* Adjust based on your needs */
+    margin-top: 10px;
+    color: #6e6d6a;
+}
+
+.homelist a {
+    text-decoration: none !important;
+}
+
+.description {
+    font-weight: 100;
+    max-width: 60%;
+    /* Adjust the width as necessary */
+    margin: 20px auto;
+    /* Center the description and add some space */
+    font-size: 1rem;
+    /* Adjust the font size as necessary */
+    color: #c6c3bb;
+    /* Light color for readability, adjust based on your background */
+    line-height: 1.5;
+    /* Improve readability */
+    text-align: center;
+    /* Ensures text is centered */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#popular-stores-title {
+    font-weight: bold;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    color: #53483a;
+    text-shadow: 2px 2px 4px rgba(141, 135, 135, 0.8);
+}
+
+/* end */
+
+/* search page css */
+
+.highlight {
+    background-color: rgba(146, 128, 111, 0.5) !important;
+    /* Or any color that makes the text stand out */
+    font-weight: bold !important;
+}
+
+.search-title {
+    font-weight: bold;
+    color: #53483a;
+}
+
+.results-count {
+    color: #53483a;
+}
+
+.search-result-item {
+    background-color: rgba(146, 128, 111, 0.3);
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    /* Rounded corners */
+}
+
+.search-result-item a {
+    text-decoration: none !important;
+}
+
+.search-result-item:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    /* Shadow effect on hover */
+    transform: translateY(-3px);
+}
+
+.search-name {
+    color: #53483a;
+    font-weight: bold;
+    margin-left: 80px;
+    text-decoration: none;
+    /* Removes underline from links */
+}
+
+.search-category {
+    color: #92806f;
+    font-style: italic;
+    font-weight: bold !important;
+    margin-left: 80px;
+    text-decoration: none;
+}
+
+.matching-items {
+    color: #6e6d6a;
+    margin-left: 60px;
+    text-decoration: none;
+}
+
+.search-circle {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+/* end */
+
+
+/* add page css */
+
+.addtitle {
+    font-weight: bold;
+    color: #53483a;
+}
+
+.form-control {
+    background-color: #ffffff;
+}
+
+.submit-form {
+    background-color: #53483a;
+    color: #C6C3BB;
+    border-color: #C6C3BB;
+    margin-bottom: 10px;
+}
+
+.submit-form:hover {
+    background-color: #92806F;
+    color: #53483a;
+    border-color: #53483a;
+}
+
+.discard {
+    background-color: #6e6d6a;
+    color: #C6C3BB;
+    border-color: #C6C3BB;
+    margin-bottom:10px;
+}
+
+.discard:hover {
+    background-color: #92806F;
+    color: #53483a;
+    border-color: #53483a;
+}
+
+
+/* end */
+
+/* view page css */
+
+.item-image {
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+}
+
+.edit {
+    margin: 15px 0 0 10px;
+    color:#92806F;
+}
+
+.edit:hover {
+    margin: 15px 0 0 10px;
+    color:#53483a;
+}
+
+.image-container {
+    width: 500px;
+    height: 700px;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#view-title {
+    font-weight: bold;
+    color: #53483a;
+    margin-top: 20px;
+}
+
+.view-adr {
+    color: #53483a;
+    margin: 3px;
+    font-size: 15px;
+
+}
+
+#view-des {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: #6e6d6a;
+}
+
+#pdrink {
+    color:#53483a;
+    font-size: 18px;
+}
+
+.drink {
+    margin: 10px 70px;
+    font-size: 16px;
+}
+
+.drink-word {
+    cursor: pointer;
+}
+
+/* end */
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin: 0.5em 0;
+}

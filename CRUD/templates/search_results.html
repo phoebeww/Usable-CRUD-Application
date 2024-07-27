@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+
+<div class="container mt-4">
+    <h2 class="search-title">Search Results for "{{ query }}"</h2>
+
+    {% if num_results > 0 %}
+    <p class="results-count">{{ num_results }} results found.</p>
+    {% for item in items %}
+    <div class="search-result-item"><a href="/view/{{ item.id }}">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <img src="{{ item.image }}" class="search-circle" alt="{{ item.name|tojson }}">
+                </div>
+                <div class="col-md-10">
+                    <div class="item-header mb-2">
+                        <h3 class="search-name d-inline-block mb-0">{{ item.name }}</h3>
+                        <p class="search-category d-inline-block mb-0 ml-2">- {{ item.category }}</p>
+                    </div>
+                    <div class="matching-items">
+                        <ul>
+                            {% for drink in item.example_drinks %}
+                            <li>{{ drink }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="results-count">No matches found.</p>
+    {% endif %}
+</div>
+{% endblock %}

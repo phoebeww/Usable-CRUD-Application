@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="addtitle">Edit Item</h2>
+    <div id="success-message" class="alert alert-success" role="alert" style="display:none;"></div>
+    <form id="edit-item-form" autocomplete="off">
+        <!-- Input for Name -->
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter the name here..." id="name" name="name"
+                value="{{ item.name }}">
+            <div id="name-error" class="error-message"></div>
+        </div>
+
+        <!-- Input for Image URL -->
+        <div class="form-group">
+            <label for="image">Image URL:</label>
+            <input type="url" class="form-control" placeholder="Enter the image URL here..." id="image" name="image"
+                value="{{ item.image }}">
+                <div id="image-error" class="error-message"></div>
+        </div>
+
+        <!-- Textarea for Description -->
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" placeholder="Enter the description here..."
+                name="description">{{ item.description }}</textarea>
+                <div id="description-error" class="error-message"></div>
+        </div>
+
+        <!-- Input for Rating -->
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <input type="number" step="0.1" min="0" max="5" class="form-control" placeholder="Enter rating here..."
+                id="rating" name="rating" value="{{ item.rating }}">
+                <div id="rating-error" class="error-message"></div>
+        </div>
+
+        <!-- Input for Address -->
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter address here..." name="address"
+                value="{{ item.address }}">
+                <div id="rating-error" class="error-message"></div>
+
+        </div>
+
+        <!-- Inputs for Example Drinks -->
+        <div class="form-group" id="example-drinks">
+            <label>Example Drinks:</label>
+            {% for drink in item.example_drinks %}
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Enter any example drink here..."
+                    name="example_drinks[]" value="{{ drink }}">
+            </div>
+            {% endfor %}
+            <div id="example-drinks-error" class="error-message"></div>
+            <button type="button" id="add-drink" class="btn btn-secondary add-drink discard">Add Another Drink</button>
+        </div>
+
+        <!-- Select for Category -->
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select class="form-control" id="category" name="category">
+                <option value="" disabled>Choose category here</option>
+                <option value="Boba" {% if item.category=='Boba' %} selected {% endif %}>Boba</option>
+                <option value="Coffee" {% if item.category=='Coffee' %} selected {% endif %}>Coffee</option>
+                <option value="Tea" {% if item.category=='Tea' %} selected {% endif %}>Tea</option>
+            </select>
+        </div>
+
+        <!-- Buttons for submit and discard changes -->
+        <button type="submit" class="btn btn-primary submit-form">Submit</button>
+        <button type="button" id="discard-changes" class="btn btn-danger discard" data-item-id="{{ item.id }}">Discard
+            Changes</button>
+    </form>
+</div>
+{% endblock %}

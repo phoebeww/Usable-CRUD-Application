@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="large bg-image">
+    <h1 class="text-overlay">NYC's Finest: Coffee, Tea & Boba Spots</h1>
+    <div class="description">Discover NYC's best coffee, tea, and boba places. 
+        From cozy corners to popular hangouts, join us for a sip-through of the 
+        city's café scene.</div>
+</div>
+<div id="popular-stores-title">
+    Popular Stores
+</div>
+<div class="row">
+{% for item in items %}
+    <div class="col-md-4 d-flex justify-content-center">
+        <div class="homelist text-center p-3">
+            <a class="clickable" href="/view/{{ item.id }}">
+                <img src="{{ item.image }}" alt="{{ item.name }}" class="rounded-circle">
+                <h2 class="text-storename">{{ item.name }}</h2>
+            </a>
+        </div>
+    </div>
+    {% if loop.index % 3 == 0 %}
+</div><div class="row">
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

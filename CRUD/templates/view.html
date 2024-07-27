@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="title-container middle">
+                <h1 class="middle" id="view-title">{{ item.name }}</h1>
+                <a class="edit" href="/edit/{{ item.id }}"><i class="fas fa-edit" id="edit-data-button"></i></a>
+            </div>
+            <p class="middle"><strong class="mr-1">Category: </strong> <i class="drink-word">{{ item.category }}</i></p>
+            <p class="middle view-adr"><strong class="mr-1">Address: </strong> {{ item.address }}</p>
+            <p class="middle view-adr"><strong class="mr-1">Rating: </strong> {{ item.rating }}</p>
+            <p class="middle" id="view-des">{{ item.description }}</p>
+            <p class="middle"><strong id="pdrink">Popular drinks: </strong></p>
+            <ul id="drink-list">
+                {% for drink in item.example_drinks %}
+                <li class="drink">{% for word in drink.split() %}<span class="drink-word mr-1">{{ word }}</span>{% endfor %}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-6 text-center">
+            <div class="image-container middle">
+                <img src="{{ item.image }}" alt="{{ item.name }}" class="item-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
